@@ -52,6 +52,11 @@ def get_net(model_name, n_output_classes=1000, **kwargs):
             model.num_classes = n_output_classes
             num_ftrs = model.classifier.in_features
             model.classifier = nn.Linear(num_ftrs, n_output_classes)
+        ### BUSE ###
+        elif 'efficient' in model_name:
+            model.num_classes = n_output_classes
+            num_ftrs = model.classifier[1].in_features
+            model.classifier[1] = nn.Linear(num_ftrs, n_output_classes)
         else:
             num_ftrs = model.fc.in_features
             model.fc = nn.Linear(num_ftrs, n_output_classes)

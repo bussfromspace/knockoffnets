@@ -96,8 +96,9 @@ def main():
     # ----------- Set up model
     model_name = params['model_arch']
     pretrained = params['pretrained']
-    # model = model_utils.get_net(model_name, n_output_classes=num_classes, pretrained=pretrained)
-    model = zoo.get_net(model_name, modelfamily, pretrained, num_classes=num_classes)
+    ## BUSE ## (comments are reversed)
+    model = model_utils.get_net(model_name, n_output_classes=num_classes, pretrained=pretrained)
+    #model = zoo.get_net(model_name, modelfamily, pretrained, num_classes=num_classes)
     model = model.to(device)
 
     # ----------- Train
