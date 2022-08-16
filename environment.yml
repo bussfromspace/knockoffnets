@@ -2,20 +2,37 @@ name: knockoff
 channels:
   - defaults
 dependencies:
-  - ca-certificates=2019.5.15=0
-  - certifi=2019.6.16=py36_0
+  - _libgcc_mutex=0.1=main
+  - ca-certificates=2022.07.19=h06a4308_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
   - libedit=3.1.20181209=hc058e9b_0
   - libffi=3.2.1=hd88cf55_4
   - libgcc-ng=9.1.0=hdf63c60_0
+  - libprotobuf=3.19.1=h4ff587b_0
   - libstdcxx-ng=9.1.0=hdf63c60_0
   - ncurses=6.1=he6710b0_1
-  - openssl=1.1.1c=h7b6447c_1
+  - openssl=1.1.1q=h7f8727e_0
   - pip=19.1.1=py36_0
   - python=3.6.8=h0371630_0
   - readline=7.0=h7b6447c_5
-  - setuptools=41.0.1=py36_0
   - sqlite=3.28.0=h7b6447c_0
   - tk=8.6.8=hbc83047_0
-  - wheel=0.33.4=py36_0
   - xz=5.2.4=h14c3975_4
   - zlib=1.2.11=h7b6447c_3
+  - pip:
+    - dataclasses==0.8
+    - munch==2.3.2
+    - numpy==1.16.4
+    - nvidia-cuda-runtime-cu11==2022.4.25
+    - nvidia-cuda-runtime-cu117==11.7.60
+    - nvidia-pyindex==1.0.9
+    - pillow==6.0.0
+    - pretrainedmodels==0.7.4
+    - setuptools==59.6.0
+    - six==1.12.0
+    - torch==1.1.0
+    - torchvision==0.11.2
+    - tqdm==4.32.2
+    - typing-extensions==4.1.1
+    - wheel==0.37.1
+prefix: /home/batlitek/miniconda3/envs/knockoff
