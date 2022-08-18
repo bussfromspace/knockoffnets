@@ -196,8 +196,12 @@ def train_model(model, trainset, out_path, batch_size=64, criterion_train=None, 
         criterion_test = nn.CrossEntropyLoss(reduction='mean', weight=weight)
     if optimizer is None:
         optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=5e-4)
+        #optimizer = optim.AdamW(model.parameters(), lr=1e-6, weight_decay=1e-2)
     if scheduler is None:
         scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=lr_step, gamma=lr_gamma)
+        #scheduler = optim.lr_scheduler.OneCycleLR(optimizer, max_lr=1e-2,
+        #                                     steps_per_epoch=len(train_loader), epochs=epochs)
+
     start_epoch = 1
     best_train_acc, train_acc = -1., -1.
     best_test_acc, test_acc, test_loss = -1., -1., -1.
